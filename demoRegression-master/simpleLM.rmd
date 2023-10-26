@@ -1,7 +1,7 @@
 ---
 title: "simpleRegress"
 author: "Daniel"
-date: "Fall 2020"
+date: "Fall 2023"
 output: html_document
 ---
 
@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## make a simple regression model
+## make a regression simple model
 
 ```{r}
 bears <- read.csv(file="BEARS.csv",header = TRUE)
@@ -30,3 +30,13 @@ summary.lm(simp)
 
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
+## make a simple regression mode for age
+
+## Model LENGTH ~ AGE  this is an example  
+
+```{r}
+AGEmodel <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(AGEmodel)
+summary.lm(AGEmodel)
+```
