@@ -40,3 +40,24 @@ plot(LENGTH~AGE,data=bears)
 abline(AGEmodel)
 summary.lm(AGEmodel)
 ```
+
+## make a simple regression mode for head length
+## Model LENGTH ~ HEADLEN  this is an example  
+
+```{r}
+HEADLENmodel <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(HEADLENmodel)
+summary.lm(HEADLENmodel)
+```
+
+
+## make a simple regression mode for head width
+## Model LENGTH ~ HEADWTH  this is an example  
+
+```{r}
+HEADWTHmodel <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(HEADWTHmodel)
+summary.lm(HEADWTHmodel)
+```
